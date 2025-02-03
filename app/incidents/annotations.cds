@@ -1,4 +1,6 @@
 using ProcessorService as service from '../../srv/services';
+using from '../../db/schema';
+
 annotate service.Incidents with @(
     UI.FieldGroup #GeneratedGroup : {
         $Type : 'UI.FieldGroupType',
@@ -53,6 +55,10 @@ annotate service.Incidents with @(
             Value : status_code,
         },
     ],
+    UI.SelectionFields : [
+        urgency_code,
+        status_code,
+    ],
 );
 
 annotate service.Incidents with {
@@ -83,5 +89,29 @@ annotate service.Incidents with {
             },
         ],
     }
+};
+
+annotate service.Incidents with {
+    urgency @(
+        Common.Label : '{i18n>Urgency}',
+        Common.ValueListWithFixedValues : true,
+        Common.Text : urgency.descr,
+    )
+};
+
+annotate service.Incidents with {
+    status @(
+        Common.Label : '{i18n>Status}',
+        Common.ValueListWithFixedValues : true,
+        Common.Text : status.descr,
+    )
+};
+
+annotate service.Status with {
+    code @Common.Text : descr
+};
+
+annotate service.Urgency with {
+    code @Common.Text : descr
 };
 
