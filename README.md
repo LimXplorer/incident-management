@@ -26,3 +26,8 @@ File or Folder | Purpose
 ## Learn More
 
 Learn more at https://cap.cloud.sap/docs/get-started/.
+
+## Q&A
+Q: In the Application Info - incidents tab, choose the Preview Application option.If you get an error SyntaxError: Unexpected token / in JSON at position 4
+A: Open the file .vscode/launch.json, delete any comments that you have there, and try again.
+
