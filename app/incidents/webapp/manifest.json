@@ -141,7 +141,17 @@
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/Incidents"
+              "contextPath": "/Incidents",
+              "controlConfiguration": {
+                "conversation/@com.sap.vocabularies.UI.v1.LineItem#Conversation": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable",
+                    "creationMode": {
+                      "name": "Inline"
+                    }
+                  }
+                }
+              }
             }
           },
           "controlAggregation": "midColumnPages",
