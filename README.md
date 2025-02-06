@@ -41,3 +41,7 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 - 2 - Critical (orange): Indicates a critical status. The data is highlighted in orange to indicate urgent attention is needed.
 - 3 - Positive (green): Indicates a positive status. The data is highlighted in green to show successful or favorable conditions.
 - 5 - New Item (blue): Indicates a new item. The data is highlighted in blue to highlight new items that were created outside of the app and need the user's attention.
+
+**Q:** Why is the file named launchpage.html instead of index.html?
+
+**A:** Naming the HTML file for the **launchpage.html** instead of **index.html** is mainly to avoid conflict with the **index.html(app/[YOU_APP]/webapp/index.html)** that the CAP server finds by default, while retaining the functionality and structure of the default page for easy development and maintenance.
