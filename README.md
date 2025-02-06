@@ -81,3 +81,24 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 **Q:** Why should you open **app/incidents/webapp/manifest.json** and remove the leading **/** from the **uri** parameter?
 
 **A:** This is necessary because dataSource URIs must be relative to the base URL, meaning they should not start with a slash. Additionally, Business Service UIs must be stored in the HTML5 Application Repository and marked as   public: true   in their manifest.json files to be accessible from an application router running in a different space. Removing the leading slash ensures correct URI resolution.
+
+**Q:** How do the components in an MTA file work together when deploying a CAP application to SAP BTP?
+
+**A:** The components interact as follows during a user request:
+User Browser
+   │
+   ├─> Work Zone (Central Entry Point)
+   │
+   ├─> App Router (Request Routing)
+   │
+   ├─> CAP APP (Backend Service Layer)
+   │   │
+   │   ├─> Database (Data Storage)
+   │   │
+   │   └─> Destination (Access External Services)
+   │
+   └─> HTML5 Repository (Frontend Application)
+
+**Q:** What is the difference between modules and resources in SAP CAP MTA?
+**A:** In SAP CAP MTA, modules are the self-contained units of the application that are developed, packaged, and deployed. They encapsulate specific functionalities, such as business logic or user interfaces. Resources, on the other hand, are the external services or infrastructure components required by modules at runtime, such as databases or authentication services. Essentially, modules are the building blocks of the application, while resources provide the necessary infrastructure for them to function.
+   
