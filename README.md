@@ -47,6 +47,7 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 - Restart the stopped HANA Cloud service instance: `cf update-service <YOUR-HANA-CLOUD-INSTANCE-NAME> -c '{"data":{"serviceStopped":false}}`
 
 - Generate the **mta.yaml** deployment descriptor: `cds add mta`
+- Add configuration for SAP Build Work Zone, standard edition: `cds add workzone-standard`
 
 - Invoke the **Command Palette** quickly using the following key combination
     - For macOS: `Command + Shift + P`
@@ -76,3 +77,7 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 
 **Q:** How to deploy the application?
 **A:** Follow this tutorial: [Deploy a Full-Stack CAP Application in SAP BTP, Cloud Foundry Runtime Following SAP BTP Developer’s Guide](https://developers.sap.com/group.deploy-full-stack-cap-application.html)
+
+**Q:** Why should you open **app/incidents/webapp/manifest.json** and remove the leading **/** from the **uri** parameter?
+
+**A:** This is necessary because dataSource URIs must be relative to the base URL, meaning they should not start with a slash. Additionally, Business Service UIs must be stored in the HTML5 Application Repository and marked as   public: true   in their manifest.json files to be accessible from an application router running in a different space. Removing the leading slash ensures correct URI resolution.
