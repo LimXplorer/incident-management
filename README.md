@@ -40,8 +40,10 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 - Test the application: `npm run test` (**npm run**is a tool to execute scripts defined in **package.json**,***test*is a script name defined in the **scripts** section)
 
 - Add SAP HANA Cloud: `cds add hana --for production`
-- Add SAP Authorization and Trust Management service (**XSUAA**: XS(Extended Services) User and Authentication and Authorization): `cds add xsuaa --for production`
+- Add XSUAA: `cds add xsuaa --for production`
 - Add HTML5 Repo: `cds add html5-repo`
+
+- Run a test build: `cds build --production`
 
 - Invoke the **Command Palette** quickly using the following key combination
     - For macOS: `Command + Shift + P`
@@ -65,3 +67,6 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 **Q:** Why is the file named launchpage.html instead of index.html?
 
 **A:** Naming the HTML file for the **launchpage.html** instead of **index.html** is mainly to avoid conflict with the **index.html (app/<YOU_APP>/webapp/index.html)** that the CAP server finds by default, while retaining the functionality and structure of the default page for easy development and maintenance.
+
+**Q:** What is XSUAA?
+**A:** XSUAA (XS User and Authentication and Authorization) is the SAP Authorization and Trust Management service, an OAuth 2.0 authorization server that provides user authentication and fine-grained authorization management for applications on SAP BTP.
