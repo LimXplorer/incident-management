@@ -29,6 +29,8 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 
 ## Command
 
+- Install dependencies: `npm install`
+
 - Create a new project: `cds init <YOU_PROJECT>`
 - Use the terminal to start a CAP server: `cds watch`
 - Resolving port conflicts: `lsof -i:<port_number>`
@@ -39,6 +41,7 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 
 - Add SAP HANA Cloud: `cds add hana --for production`
 - Add SAP Authorization and Trust Management service (**XSUAA**: XS(Extended Services) User and Authentication and Authorization): `cds add xsuaa --for production`
+- Add HTML5 Repo: `cds add html5-repo`
 
 - Invoke the **Command Palette** quickly using the following key combination
     - For macOS: `Command + Shift + P`
