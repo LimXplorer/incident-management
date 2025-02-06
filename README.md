@@ -48,6 +48,8 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 
 - Generate the **mta.yaml** deployment descriptor: `cds add mta`
 - Add configuration for SAP Build Work Zone, standard edition: `cds add workzone-standard`
+- Assemble with the Cloud MTA Build Tool: `mbt build`
+- Deploy the generated archive to the SAP BTP, Cloud Foundry runtime: `cf deploy mta_archives/incident-management_1.0.0.mtar`
 
 - Invoke the **Command Palette** quickly using the following key combination
     - For macOS: `Command + Shift + P`
