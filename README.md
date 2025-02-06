@@ -109,4 +109,4 @@ User Browser
 
 **Q:** What is the difference between **cf services** and **cf apps**?
 **A:** In SAP CAP MTA, **resources** become Cloud Foundry services, and the **modules** become Cloud Foundry applications.
-   
+
