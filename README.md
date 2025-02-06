@@ -31,7 +31,7 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 
 - Install dependencies: `npm install`
 
-- Create a new project: `cds init <YOU_PROJECT>`
+- Create a new project: `cds init <YOUR_PROJECT>`
 - Use the terminal to start a CAP server: `cds watch`
 - Resolving port conflicts: `lsof -i:<port_number>`
 
@@ -44,6 +44,9 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 - Add HTML5 Repo: `cds add html5-repo`
 
 - Run a test build: `cds build --production`
+- Restart the stopped HANA Cloud service instance: `cf update-service <YOUR-HANA-CLOUD-INSTANCE-NAME> -c '{"data":{"serviceStopped":false}}`
+
+- Generate the **mta.yaml** deployment descriptor: `cds add mta`
 
 - Invoke the **Command Palette** quickly using the following key combination
     - For macOS: `Command + Shift + P`
@@ -66,7 +69,10 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 
 **Q:** Why is the file named launchpage.html instead of index.html?
 
-**A:** Naming the HTML file for the **launchpage.html** instead of **index.html** is mainly to avoid conflict with the **index.html (app/<YOU_APP>/webapp/index.html)** that the CAP server finds by default, while retaining the functionality and structure of the default page for easy development and maintenance.
+**A:** Naming the HTML file for the **launchpage.html** instead of **index.html** is mainly to avoid conflict with the **index.html (app/<YOUR_APP>/webapp/index.html)** that the CAP server finds by default, while retaining the functionality and structure of the default page for easy development and maintenance.
 
 **Q:** What is XSUAA?
 **A:** XSUAA (XS User and Authentication and Authorization) is the SAP Authorization and Trust Management service, an OAuth 2.0 authorization server that provides user authentication and fine-grained authorization management for applications on SAP BTP.
+
+**Q:** How to deploy the application?
+**A:** Follow this tutorial: [Deploy a Full-Stack CAP Application in SAP BTP, Cloud Foundry Runtime Following SAP BTP Developer’s Guide](https://developers.sap.com/group.deploy-full-stack-cap-application.html)
