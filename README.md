@@ -32,9 +32,12 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 - Create a new project: `cds init <YOU_PROJECT>`
 - Use the terminal to start a CAP server: `cds watch`
 - Resolving port conflicts: `lsof -i:<port_number>`
+
 - Fill it with some test data: `cds add data` or `cds add data --records`
 - Add Test Cases dependencies: `npm add -D axios chai@4 chai-as-promised@7.1.2 chai-subset jest`
 - Test the application: `npm run test` (**npm run**is a tool to execute scripts defined in **package.json**,***test*is a script name defined in the **scripts** section)
+
+- Add SAP HANA Cloud: `cds add hana --for production`
 
 - Invoke the **Command Palette** quickly using the following key combination
     - For macOS: `Command + Shift + P`
