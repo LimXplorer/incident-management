@@ -51,6 +51,9 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 - Assemble with the Cloud MTA Build Tool: `mbt build`
 - Deploy the generated archive to the SAP BTP, Cloud Foundry runtime: `cf deploy mta_archives/incident-management_1.0.0.mtar`
 
+- Check if all services have been created: `cf services`
+- Check if the apps are running: `cf apps`
+
 - Invoke the **Command Palette** quickly using the following key combination
     - For macOS: `Command + Shift + P`
     - For Windows: `Ctrl + Shift + P`
@@ -101,6 +104,9 @@ User Browser
    │
    └─> HTML5 Repository (Frontend Application)
 
-**Q:** What is the difference between modules and resources in SAP CAP MTA?
+**Q:** What is the difference between **modules** and **resources** in SAP CAP MTA?
 **A:** In SAP CAP MTA, modules are the self-contained units of the application that are developed, packaged, and deployed. They encapsulate specific functionalities, such as business logic or user interfaces. Resources, on the other hand, are the external services or infrastructure components required by modules at runtime, such as databases or authentication services. Essentially, modules are the building blocks of the application, while resources provide the necessary infrastructure for them to function.
+
+**Q:** What is the difference between **cf services** and **cf apps**?
+**A:** In SAP CAP MTA, **resources** become Cloud Foundry services, and the **modules** become Cloud Foundry applications.
    
