@@ -38,6 +38,7 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 - Test the application: `npm run test` (**npm run**is a tool to execute scripts defined in **package.json**,***test*is a script name defined in the **scripts** section)
 
 - Add SAP HANA Cloud: `cds add hana --for production`
+- Add SAP Authorization and Trust Management service (**XSUAA**: XS(Extended Services) User and Authentication and Authorization): `cds add xsuaa --for production`
 
 - Invoke the **Command Palette** quickly using the following key combination
     - For macOS: `Command + Shift + P`
