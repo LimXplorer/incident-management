@@ -54,6 +54,9 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 - Check if all services have been created: `cf services`
 - Check if the apps are running: `cf apps`
 
+- Communication with external systems: `npm add @sap-cloud-sdk/http-client@3.x @sap-cloud-sdk/util@3.x @sap-cloud-sdk/connectivity@3.x @sap-cloud-sdk/resilience@3.x`
+- Use edmx file: `cds import API_BUSINESS_PARTNER.edmx --as cds`
+
 - Invoke the **Command Palette** quickly using the following key combination
     - For macOS: `Command + Shift + P`
     - For Windows: `Ctrl + Shift + P`
