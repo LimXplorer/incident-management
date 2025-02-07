@@ -49,13 +49,20 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 - Generate the **mta.yaml** deployment descriptor: `cds add mta`
 - Add configuration for SAP Build Work Zone, standard edition: `cds add workzone-standard`
 - Assemble with the Cloud MTA Build Tool: `mbt build`
-- Deploy the generated archive to the SAP BTP, Cloud Foundry runtime: `cf deploy mta_archives/incident-management_1.0.0.mtar`
+
+- Log in to your subaccount in SAP BTP [1]: `cf api <API-ENDPOINT>`
+- Log in to your subaccount in SAP BTP <2>: `cf login` or `cf login --sso`
+- Log in to your subaccount in SAP BTP [3]: `cf target -o <ORG> -s <SPACE>`
+- Deploy the generated archive to the SAP BTP, Cloud Foundry runtime: `cf deploy mta_archives/<PACKAGE_NAME>_1.0.0.mtar`
 
 - Check if all services have been created: `cf services`
 - Check if the apps are running: `cf apps`
 
 - Communication with external systems: `npm add @sap-cloud-sdk/http-client@3.x @sap-cloud-sdk/util@3.x @sap-cloud-sdk/connectivity@3.x @sap-cloud-sdk/resilience@3.x`
 - Use edmx file: `cds import API_BUSINESS_PARTNER.edmx --as cds`
+
+- Run the tests: `npm run test`
+- Run the mock server locally： `cds mock API_BUSINESS_PARTNER`
 
 - Invoke the **Command Palette** quickly using the following key combination
     - For macOS: `Command + Shift + P`
@@ -78,7 +85,7 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 
 **Q:** Why is the file named launchpage.html instead of index.html?
 
-**A:** Naming the HTML file for the **launchpage.html** instead of **index.html** is mainly to avoid conflict with the **index.html (app/<YOUR_APP>/webapp/index.html)** that the CAP server finds by default, while retaining the functionality and structure of the default page for easy development and maintenance.
+**A:** Naming the HTML file for the **launchpage.html** instead of **index.html** is mainly to avoid conflict with the **index.html (app/<YOUR_APP>/webapp/index.html)** that the CAP server finds by default, while retaining the functionality and structure of the default page for easy development and maintenance. (/launchpage.html uses a local launchpage, while /incidents/webapp/index.html uses the index.html from ui5 app)
 
 **Q:** What is XSUAA?
 **A:** XSUAA (XS User and Authentication and Authorization) is the SAP Authorization and Trust Management service, an OAuth 2.0 authorization server that provides user authentication and fine-grained authorization management for applications on SAP BTP.
