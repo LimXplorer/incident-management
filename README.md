@@ -37,7 +37,7 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 
 - Fill it with some test data: `cds add data` or `cds add data --records`
 - Add Test Cases dependencies: `npm add -D axios chai@4 chai-as-promised@7.1.2 chai-subset jest`
-- Test the application: `npm run test` (**npm run**is a tool to execute scripts defined in **package.json**,***test*is a script name defined in the **scripts** section)
+- Test the application: `npm run test`
 
 - Add SAP HANA Cloud: `cds add hana --for production`
 - Add XSUAA: `cds add xsuaa --for production`
@@ -74,6 +74,10 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 
 **A:** Open the file **.vscode/launch.json**, delete any comments that you have there, and try again.
 
+**Q:** What is the logic behind npm run test?
+
+**A:** **npm run** is a tool to execute scripts defined in **package.json**, and **test** is a script name defined in the **scripts** section.
+
 **Q:** How is the criticality property used in SAP Fiori to highlight data?
 
 **A:** The criticality property in SAP Fiori is used to visually highlight data based on its status. The property can have the following values, each of which is associated with a specific color and meaning:
@@ -83,7 +87,7 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 - 3 - Positive (green): Indicates a positive status. The data is highlighted in green to show successful or favorable conditions.
 - 5 - New Item (blue): Indicates a new item. The data is highlighted in blue to highlight new items that were created outside of the app and need the user's attention.
 
-**Q:** Why is the file named launchpage.html instead of index.html?
+**Q:** Why is the file named **launchpage.html** instead of **index.html**?
 
 **A:** Naming the HTML file for the **launchpage.html** instead of **index.html** is mainly to avoid conflict with the **index.html (app/<YOUR_APP>/webapp/index.html)** that the CAP server finds by default, while retaining the functionality and structure of the default page for easy development and maintenance. (/launchpage.html uses a local launchpage, while /incidents/webapp/index.html uses the index.html from ui5 app)
 
@@ -115,8 +119,8 @@ User Browser
    └─> HTML5 Repository (Frontend Application)
 
 **Q:** What is the difference between **modules** and **resources** in SAP CAP MTA?
-**A:** In SAP CAP MTA, modules are the self-contained units of the application that are developed, packaged, and deployed. They encapsulate specific functionalities, such as business logic or user interfaces. Resources, on the other hand, are the external services or infrastructure components required by modules at runtime, such as databases or authentication services. Essentially, modules are the building blocks of the application, while resources provide the necessary infrastructure for them to function.
+**A:** In SAP CAP MTA, **modules** are the self-contained units of the application that are developed, packaged, and deployed. They encapsulate specific functionalities, such as business logic or user interfaces. And the **resources**, on the other hand, are the external services or infrastructure components required by modules at runtime, such as databases or authentication services. Essentially, **modules** are the building blocks of the application, while **resources** provide the necessary infrastructure for them to function.
 
 **Q:** What is the difference between **cf services** and **cf apps**?
-**A:** In SAP CAP MTA, **resources** become Cloud Foundry services, and the **modules** become Cloud Foundry applications.
+**A:** In SAP CAP MTA, **resources** become Cloud Foundry **services**, and the **modules** become Cloud Foundry **applications**.
 
